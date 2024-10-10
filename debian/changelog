@@ -1,5 +1,12 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-gregjones-httpcache (0.0~git20180305.9cad4c3-1.1) unstable; urgency=medium
 
-  * Initial release
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Holger Levsen <holger@debian.org>  Fri, 08 Jan 2021 16:32:09 +0100
+
+golang-github-gregjones-httpcache (0.0~git20180305.9cad4c3-1) unstable; urgency=medium
+
+  * Initial release (Closes: #907355)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 26 Aug 2018 23:34:32 +0200
