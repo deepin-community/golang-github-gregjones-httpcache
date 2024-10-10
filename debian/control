@@ -1,15 +1,32 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-gregjones-httpcache
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Dr. Tobias Quathamer <toddy@debian.org>
+Build-Depends: debhelper (>= 11),
+               dh-golang,
+               golang-any,
+               golang-github-bradfitz-gomemcache-dev,
+               golang-github-garyburd-redigo-dev,
+               golang-github-peterbourgon-diskv-dev,
+               golang-github-syndtr-goleveldb-dev
+Standards-Version: 4.2.1
+Homepage: https://github.com/gregjones/httpcache
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-gregjones-httpcache
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-gregjones-httpcache.git
+XS-Go-Import-Path: github.com/gregjones/httpcache
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-gregjones-httpcache-dev
+Architecture: all
+Depends: ${misc:Depends},
+         golang-github-bradfitz-gomemcache-dev,
+         golang-github-garyburd-redigo-dev,
+         golang-github-peterbourgon-diskv-dev,
+         golang-github-syndtr-goleveldb-dev
+Description: Transport for http.Client that will cache responses
+ The package httpcache provides a http.RoundTripper implementation that
+ works as a mostly RFC 7234 compliant cache for http responses.
+ .
+ It is only suitable for use as a 'private' cache (i.e. for
+ a web-browser or an API-client and not for a shared proxy).
